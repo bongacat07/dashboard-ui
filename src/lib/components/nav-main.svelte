@@ -17,7 +17,7 @@
 					tooltipContent="Quick create"
 				>
 					<CirclePlusFilledIcon />
-					<span>Quick Create</span>
+					<span>Export</span>
 				</Sidebar.MenuButton>
 				<Button
 					size="icon"

@@ -63,13 +63,14 @@
 						<UserCircleIcon />
 						Account
 					</DropdownMenu.Item>
-					<DropdownMenu.Item>
-						<CreditCardIcon />
-						Billing
-					</DropdownMenu.Item>
+					
 					<DropdownMenu.Item>
 						<NotificationIcon />
 						Notifications
+					</DropdownMenu.Item>
+					<DropdownMenu.Item>
+						<NotificationIcon />
+						Settings
 					</DropdownMenu.Item>
 				</DropdownMenu.Group>
 				<DropdownMenu.Separator />

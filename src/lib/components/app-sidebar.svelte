@@ -23,7 +23,7 @@
 
 	const data = {
 		user: {
-			name: "shadcn",
+			name: "John Doe",
 			email: "m@example.com",
 			avatar: "/avatars/shadcn.jpg",
 		},
@@ -43,11 +43,7 @@
 				url: "#",
 				icon: ChartBarIcon,
 			},
-			{
-				title: "Projects",
-				url: "#",
-				icon: FolderIcon,
-			},
+			
 			{
 				title: "Team",
 				url: "#",
@@ -130,11 +126,7 @@
 				url: "#",
 				icon: ReportIcon,
 			},
-			{
-				name: "Word Assistant",
-				url: "#",
-				icon: FileWordIcon,
-			},
+			
 		],
 	};
 
@@ -149,7 +141,7 @@
 					{#snippet child({ props })}
 						<a href="##" {...props}>
 							<InnerShadowTopIcon class="!size-5" />
-							<span class="text-base font-semibold">Acme Inc.</span>
+							<span class="text-base font-semibold">Nakshatra</span>
 						</a>
 					{/snippet}
 				</Sidebar.MenuButton>
