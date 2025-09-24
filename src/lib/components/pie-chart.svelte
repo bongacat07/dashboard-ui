@@ -4,6 +4,13 @@
   import * as Chart from "$lib/components/ui/chart/index.js";
   import * as Card from "$lib/components/ui/card/index.js";
 
+  // Helper function to capitalize each word
+  const capitalizeWords = (str: string) =>
+    str
+      .split(" ")
+      .map((word) => word[0].toUpperCase() + word.slice(1))
+      .join(" ");
+
   // Data: Forest officers per zone
   const zoneData = [
     { zone: "Western Range", officers: 50, color: "var(--color-western)" },
@@ -50,14 +57,9 @@
           data={zoneData}
           key="zone"
           value="officers"
-          label={(d) =>
-            d.zone
-              .split(" ")
-              .map((word) => word[0].toUpperCase() + word.slice(1))
-              .join(" ")}
+          label={(d) => capitalizeWords(d.zone)}
           cRange={zoneData.map((d) => d.color)}
           props={{ pie: { motion: "tween" } }}
-          legend
         >
           {#snippet tooltip()}
             <Chart.Tooltip hideLabel />
@@ -87,14 +89,9 @@
           data={roleData}
           key="role"
           value="officers"
-          label={(d) =>
-            d.role
-              .split(" ")
-              .map((word) => word[0].toUpperCase() + word.slice(1))
-              .join(" ")}
+          label={(d) => capitalizeWords(d.role)}
           cRange={roleData.map((d) => d.color)}
           props={{ pie: { motion: "tween" } }}
-          legend
         >
           {#snippet tooltip()}
             <Chart.Tooltip hideLabel />
@@ -111,6 +108,4 @@
       </div>
     </Card.Footer>
   </Card.Root>
-
-  
 </div>
